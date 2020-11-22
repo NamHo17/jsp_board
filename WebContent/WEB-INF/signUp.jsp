@@ -30,7 +30,7 @@
             <div id="login-row" class="row justify-content-center align-items-center">
                 <div id="login-column" class="col-md-6">
                     <div id="login-box" class="col-md-12">
-                        <form id="login-form" class="form" action="login.do" method="POST">
+                        <form id="login-form" class="form" action="join.do" method="POST">
                             <h3 class="text-center text-info">회원가입</h3>
                             <div class="form-group">
                                 <label for="username" class="text-info">아이디:</label><br>
@@ -38,7 +38,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">비밀번호:</label><br>
-                                <input type="text" name="user_pw" id="user_pw" class="form-control">
+                                <input type="password" name="user_pw" id="user_pw" class="form-control">
                             </div>
                           	<div class="form-group">
                                 <label for="name" class="text-info">이름:</label><br>

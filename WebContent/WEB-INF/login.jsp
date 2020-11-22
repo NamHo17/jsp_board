@@ -37,7 +37,7 @@
                             </div>
                             <div class="form-group">
                                 <label for="password" class="text-info">비밀번호:</label><br>
-                                <input type="text" name="user_pw" id="password" class="form-control">
+                                <input type="password" name="user_pw" id="password" class="form-control">
                             </div>
                             <div class="form-group navbar-right">
                             	<input type="submit" name="submit" class="btn btn-info btn-md" value="로그인">

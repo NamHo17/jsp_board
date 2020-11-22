@@ -66,12 +66,12 @@ public class BoardDao {
 	
 	public int nextVal() {
 		con = this.getConnect();
-		String SQL = "SELECT MAX(board_id) FROM board";
+		String SQL = "SELECT count(17) FROM board";
 		try {
 			pstmt = con.prepareStatement(SQL);
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
-				result = rs.getInt("MAX(board_id)");
+				result = rs.getInt(1);
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

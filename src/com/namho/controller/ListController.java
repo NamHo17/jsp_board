@@ -37,18 +37,22 @@ public class ListController extends HttpServlet{
 		String page_number = req.getParameter("page_number");
 		String search = req.getParameter("search");
 		
-	
 		bList = bDao.list(page_number, search);
 		
-		
 		result = bDao.nextVal();
-		int page_button = (result / 10) + 1;
+		int page_button = 1;
+		if ((result % 10) != 0) {
+			page_button = (result / 10) + 1;
+			req.setAttribute("page_button", page_button);
+		} else {
+			req.setAttribute("page_button", page_button);
+		}
+		
 		System.out.println(page_button + "개의 버튼을 생성합니다.");
 		System.out.println("현재 게시물의 갯수는: " + result + "개");
 		
 		
 		req.setAttribute("page_number", page_number);
-		req.setAttribute("page_button", page_button);
 		req.setAttribute("result", result);
 		req.setAttribute("bList", bList);
 		RequestDispatcher rd = req.getRequestDispatcher("/WEB-INF/list.jsp");
